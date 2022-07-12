@@ -1,3 +1,21 @@
+#font{
+    font-size: large;
+}
+#button{
+   text-align: right;
+   padding: 30px;
+}
+.rounded-pill{
+    padding: 1px;
+    margin: 3px;
+}
+#adv-search{
+    color: rgb(217, 48, 37);
+    font-size: xx-large;
+}
+#search_for{
+    font-size: 1.3rem;
+}
 #topright1{
     position: absolute;
     top: 0px;
