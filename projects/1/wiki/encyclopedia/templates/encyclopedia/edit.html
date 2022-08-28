@@ -1,20 +1,19 @@
 {% extends "encyclopedia/layout.html" %}
 
 {% block title %}
-New page
 {% endblock %}
 
 {% block body %}
-
-<h1>Edit Page</h1>
-    
-<form action="{% url 'edit' %}" method='POST'>
-    {% csrf_token %}
-  <label >Title:</label><br>
-  <input type="text" name="title" value="{{title}}"><br>
-  <label >Content/Body:</label><br>
-  <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="11">{{content}}</textarea><br><br>
-  <input type="submit" value="Edit" class= "btn btn-primary">
-</form> 
-
+<form action="{% url 'save_edit' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Title</label>
+          <input type="text" name ="title" value="{{title}}" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Edit Text</label>
+          <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="8">{{content}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Save Edit</button>
+      </form>
 {% endblock %}
