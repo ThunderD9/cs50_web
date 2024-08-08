@@ -8,13 +8,14 @@
                 // Send a GET request to the URL
                 fetch('https://open.er-api.com/v6/latest/USD')
                 // Put response into json form
-                .then(response => response.json())
+                .then(response => response.json()) //response.json() == data
                 .then(data => {
 
                 // Get rate from data
                 const currency = document.querySelector('#currency').value.toUpperCase() ;
                 const rate = data.rates[currency];
                 if (rate !== undefined){
+                    console.log(data);
                     document.querySelector('#result').innerHTML = `1 USD is equal to ${rate.toFixed(3)} ${currency}.`;
                 }
                 else{

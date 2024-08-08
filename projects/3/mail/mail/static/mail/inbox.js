@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#archived').addEventListener('click', () => load_mailbox('archive'));
   document.querySelector('#compose').addEventListener('click', compose_email);
 
+  //Submit handler
+  document.querySelector('#compose-view').addEventListener('submit', send_mail);
+
   // By default, load the inbox
   load_mailbox('inbox');
 });
