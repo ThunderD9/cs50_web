@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Scroll</title>
+        <script>
+
+            // Event listener for scrolling
+            window.onscroll = () => {
+
+                // Check if we're at the bottom
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+
+                    // Change color to green
+                    document.querySelector('body').style.background = 'green';
+                } else {
+
+                    // Change color to white
+                    document.querySelector('body').style.background = 'white';
+                }
+
+            };
+
+        </script>
+    </head>
+    <body>
+        <!-- generated with a loop -->
+        <script>
+            for (let i = 1; i <= 100; i++) {
+                document.write("<p>" + i + "</p>");
+            }
+        </script>
+    </body>
+</html>
